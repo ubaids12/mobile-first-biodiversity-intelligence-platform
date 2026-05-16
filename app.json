@@ -13,7 +13,10 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses the camera to identify plant species"
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -21,10 +24,27 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "CAMERA"
+      ],
+      "package": "com.darukaa.biodiversity"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "react-native-fast-tflite",
+        {
+          "enableAndroidGpuLibraries": true
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "91e7c234-176d-4d26-8b36-7d30d5f56a1d"
+      }
     }
   }
 }
